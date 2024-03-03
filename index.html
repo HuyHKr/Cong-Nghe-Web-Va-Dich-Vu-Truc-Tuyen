@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        body {
+        background-color: #f0f0f0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        p {
+            margin-top: 0px;
+        }
+      .background {
+        display: flex;
+        flex-wrap:wrap;
+      }
+      .side {
+        position:relative;
+        flex:25%;
+        height:800px;
+        margin-right:5px;
+       
+      }
+      .top-side {
+        position:relative;
+        border-radius: 15px;
+        width: 100%;
+        background-color: white;
+        padding-bottom:10px;
+        margin-bottom:10px;
+      }
+      .bottom-side {
+        position:relative;
+        border-radius: 15px;
+        width: 100%;
+        height:270px;
+        background-color: white;
+        padding-bottom: 10px;
+        padding-top:10px;
+      }
+      .main {
+        border-radius: 15px;
+        padding:10px;
+        flex:70%;
+        background-color:white;
+        height:850px;
+      }
+      #anhbia {
+        width: 100%;
+        height:200px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      .circle {
+        z-index: 1;
+        width:160px;
+        height:160px;
+        background-color: white;
+        position: absolute;
+        top:100px;
+        left:30px;
+        border-radius: 50%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #anhdaidien {
+        
+        object-fit: cover;
+        width: 150px;
+        height:150px;
+        border-radius: 50%;
+      }
+      .data{
+        font-size:16px;
+      }
+      .nav {
+        display: flex;
+        margin-left: 15px;
+      }
+      .nav >p {
+
+        line-height: 30px;
+        vertical-align: center;
+        width:100px;
+        text-align: center;
+      }
+      .nav >p:hover {
+        color:red;
+        border-bottom:2px solid red;
+      }
+      .data2{
+        margin-left: 40px;
+        display: flex;flex-wrap:wrap;height:200px;flex-direction: column;
+      }
+      h2 {
+        margin-left: 10px;
+        width: max-content;
+        border-bottom: 2px solid grey;
+      }
+      h3 {
+        margin-left: 40px;
+      }
+      @media(max-width:1000px){
+        .side {
+            flex:100%;
+        }
+        .main {
+            flex:100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <div class="side">
+        <div class="top-side">
+            <img id="anhbia" src="index1.png" alt=" Ảnh bìa">
+            <div class="circle">
+              <img id="anhdaidien" src="index2.jpeg">
+            </div>
+            <div class="data" style="margin: 80px 10px 0px 10px;" >
+                <p>MS: 20215589</p>
+                <p>Họ tên: Đào Văn Nguyên Huy</p>
+                <p>Lớp: Kỹ thuật máy tính 03-K66</p>
+                <p>Email: huy.dvn215589@sis.hust.edu.vn</p>
+                <p>Email cá nhân: nguyenhuy261224@gmail.com</p>
+            </div>
+        </div>
+        <div class="bottom-side">
+            <div class="nav">
+                <p>Trạng thái</p><p>Quản lý</p>
+            </div>
+            <div class="data" style="margin: 0px 10px 0px 10px;position:absolute;top:50px;">
+              <p>Trạng thái học tập: Học</p>
+              <p>CPA: 3.8</p>
+              <p>Nợ: 0 TC</p>
+              <p>Tích lũy: 71 TC</p>
+              <p>Mức cảnh cáo: M0</p>
+              <p>Trình độ: 3</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="nav">
+            <p>Lý lịch</p><p>Quyết định</p><p>Khen thưởng</p>
+        </div>
+        <h2>Thông tin cá nhân</h2>
+        <div class="data2">
+                <p >Ngày sinh: 26/02/2003</p>
+                <p>Số CMTND: 027203004706</p>
+                <p>Dân tộc: Kinh</p>
+                <p>Ngày vào Đoàn:</p>
+                <p>Đối tượng chính sách: </p>
+                <p>Số thẻ bảo hiểm: 2720590898 </p>
+                <p>Địa chỉ thường trú: Thôn Cổ Miếu </p>
+                <p>Nơi ở hiện tại: ngõ 272 đường Trần Khát Chân </p>
+                <p>Nơi sinh: Bắc Ninh</p>
+                <p>Nơi cấp: Bắc Ninh</p>
+                <p>Tôn giáo: Không</p>
+                <p>Ngày vào Đảng:</p>
+                <p>Giới tính: Nam</p>
+                <p>Ngày cấp: </p>
+                <p>Chi đoàn: </p>
+                <p>Đoàn viên</p>
+        </div>
+        <h2>Thông tin gia đình </h2>
+        <h3> Họ và tên cha: ĐÀO VĂN HUẾ </h3>
+        <div class="data2">
+            <p>Dân tộc: Kinh</p>
+            <p>Nơi làm việc: </p>
+            <p>Địa chỉ thường trú: </p>
+            <p>Liên hệ: 0987114413</p>
+            <p>Năm sinh: 1969</p>
+            <p>Tôn giáo: </p>
+            <p>Quốc tịch: Kinh</p>
+            <p>Nghề nghiệp: Làm ruộng</p>
+        </div>
+        <h3> Họ và tên cha: ĐÀO THỊ MINH</h3>
+        <div class="data2">
+            <p>Dân tộc: Kinh</p>
+            <p>Nơi làm việc: </p>
+            <p>Địa chỉ thường trú: </p>
+            <p>Liên hệ: 0987114413</p>
+            <p>Năm sinh: 1969</p>
+            <p>Tôn giáo: </p>
+            <p>Quốc tịch: Kinh</p>
+            <p>Nghề nghiệp: Làm ruộng</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
