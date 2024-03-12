@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Đăng ký</h1>
+            <div>Nhanh chóng và dễ dàng</div>
+            <img src="close.png" alt="close button">
+        </div>
+        <form id="form">
+            <div id="error"></div>
+            <div class="container1">
+                <input type="text" name="ho" id="ho" placeholder="Họ">
+                <input type="text" name="ten" id="ten" placeholder="Tên">
+            </div>
+            <input type="text" name="ten" id="email" placeholder="Số di động hoặc email">
+            <input type="text" name="ten" id="matkhau" placeholder="Mật khẩu">
+            <div class="selectcontainer">
+                <div>Ngày sinh</div>
+                <div class="select">
+                    <select name="ngay" id="ngay" value="3">
+                        <script>
+                            for (let i = 1; i < 32; i++) {
+                                const option = document.createElement("option");
+                                option.id = `option${i}`;
+                                option.value = `${i}`;
+                                option.innerHTML = `${i}`
+                                document.getElementById("ngay").appendChild(option)
+                            }
+                        </script>
+                    </select>
+                    <select name="thang" id="thang">
+                        <script>for (let i = 1; i <= 12; i++) {
+                                const option = document.createElement("option");
+                                option.id = `thang${i}`;
+                                option.value = `${i}`;
+                                option.innerHTML = `Tháng ${i}`
+                                document.getElementById("thang").appendChild(option)
+                            }
+
+                        </script>
+                    </select>
+                    <select name="nam" id="nam">
+                        <script>
+                            for (let i = 1980; i <= (new Date()).getFullYear(); i++) {
+                                const option = document.createElement("option");
+                                option.id = `nam${i}`;
+                                option.value = `${i}`;
+                                option.innerHTML = i;
+                                document.getElementById("nam").appendChild(option);
+                            }
+
+                        </script>
+                    </select>
+                </div>
+            </div>
+            <div class="selectcontainer">
+                <div>Giới tính</div>
+                <div class="select">
+                    <div class="radio">
+                        <label for="nu">Nữ</label>
+                        <input type="radio" name="gioitinh" id="nu"value="nu" checked>
+                    </div>
+                    <div class="radio">
+                        <label for="nam">Nam</label>
+                        <input type="radio" name="gioitinh" value="nam"id="nam">
+                    </div>
+                    <div class="radio">
+                        <label for="tuychinh">Tuỳ chỉnh</label>
+                        <input type="radio" name="gioitinh" value="tuychinh" id="tuychinh">
+                    </div>
+                </div>
+            </div>
+            <div id="info">
+                Những người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ của bạn lên Facebook. <a
+                    href="https://www.facebook.com/help/637205020878504">Tìm hiểu
+                    thêm.</a> <br><br>
+                Bằng cách nhấp vào Đăng ký, bạn đồng ý với Điều khoản, Chính sách quyền riêng tư và Chính sách cookie
+                của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.
+            </div>
+            <button type="submit">Đăng kí</button>
+        </form>
+    </div>
+</body>
+
+<script src="index.js"></script>
+</html>
