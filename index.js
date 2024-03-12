@@ -17,6 +17,9 @@ document.forms["form"].addEventListener("submit",(e)=>{
         reject("Vui lòng nhập email hoặc số điện thoại");
         return;
     }
+    if(!email(emailorphone.value)){
+        return;
+    }
     if(matkhau.value==""){
         reject("Vui lòng nhập mật khẩu!");
         return;
@@ -55,4 +58,35 @@ function dateCheck(ngay,thang,nam){
     if(nam%4!=0&&thang==2&&ngay!=28){reject("Ngày không hợp lệ !"); return false;};
     console.log("return")
     return true;
+}
+function email(email){
+    console.log(email);
+    const arr=email.split("@");
+    if(arr.length==1){
+        for(let x of email){
+            console.log(x)
+            if(x.match(/[qwertyuiopasdfghjklzxcvbnm]/i)){
+                flag=1;
+                reject("Email phải chứa @!")
+                return false
+            }
+        }
+        if(email.length!=10){
+                reject("Số điện thoại không hợp lệ!")
+                return false;
+            }
+    }
+    if(arr.length==2){
+        if(arr[1]==''){
+            reject("Email không hợp lệ!");
+            return false;
+        }
+    }
+    if(arr.length>2){
+        reject("Email không hợp lệ!");
+        return false;
+    }
+    return true;
+
+    
 }
